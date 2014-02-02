@@ -1,6 +1,6 @@
 {
   "name": "<%= _.slugify(moduleName) %>",
-  "version": "<%= _.slugify(moduleVersion) %>",
+  "version": "<%= moduleVersion %>",
   "dependencies": {
   },
   "devDependencies": {
