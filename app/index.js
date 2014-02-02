@@ -82,7 +82,8 @@ IsomodGenerator.prototype.askFor = function askFor() {
   this.prompt(prompts, function (props) {
     this.moduleName = props.moduleName;
     this.moduleVersion = props.moduleVersion;
-    this.githubUser = props.githubUser
+    this.githubUser = props.githubUser;
+    this.licenseType = props.licenseType;
 
     cb();
   }.bind(this));
