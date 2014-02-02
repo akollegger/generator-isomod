@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <title>Demo</title>
+  <script src="../dist/<%= _.slugify(moduleName) %>.js"></script>
+</head>
+<body>
+<h2>Inline Script Demo</h2>
+
+<strong>Stay classy</strong> <span id="classy"></span><br/>
+<strong>Random Number:</strong> <span id="random"></span><br/>
+<strong>Library Version:</strong> <span id="version"></span><br/>
+
+<p>Open JavaScript Console to see that <strong><%= _.camelize(moduleName) %></strong> is globally available.</p>
+
+<script>
+  var classyObject = new <%= _.camelize(moduleName) %>.IsoClassy();
+ 
+  document.getElementById('classy').innerHTML = classyObject.toString();
+  document.getElementById('random').innerHTML = <%= _.camelize(moduleName) %>.random(0,100);
+  document.getElementById('version').innerHTML = <%= _.camelize(moduleName) %>.VERSION;
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <title>Demo</title>
+  <script src="../node_modules/grunt-contrib-requirejs/node_modules/requirejs/require.js"></script>
+  <script>
+    require(['../dist/<%= _.slugify(moduleName) %>'],function(<%= _.camelize(moduleName) %>){
+      
+      var classyObject = new <%= _.camelize(moduleName) %>.IsoClassy();
+
+      document.getElementById('classy').innerHTML = classyObject.toString();
+
+      document.getElementById('version').innerHTML = <%= _.camelize(moduleName) %>.VERSION;
+
+      document.getElementById('random').innerHTML = <%= _.camelize(moduleName) %>.random();
+    });
+  </script>
+</head>
+<body>
+  <h2>AMD Demo</h2>
+
+  <strong>Stay classy</strong> <span id="classy"></span><br/>
+  <strong>Library Version:</strong> <span id="version"></span><br/>
+  <strong>Random Number:</strong> <span id="random"></span><br/>
+
+  <p>Unlike Inline example, <strong><%= _.camelize(moduleName) %></strong> is not globally available, as expected,
+    because it is namespaced in the require() block.</p>
+</body>
+</html>

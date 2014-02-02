@@ -1,0 +1,12 @@
+{
+  "name": "<%= _.slugify(moduleName) %>",
+  "version": "<%= _.slugify(moduleVersion) %>",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "almond": "0.2.7"
+  },
+  "main": [
+    "dist/<%= _.slugify(moduleName) %>.js"
+  ]
+}
