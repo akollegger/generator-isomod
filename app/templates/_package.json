@@ -5,6 +5,9 @@
   "bin": {
     "packageName": "./bin/<%= _.slugify(moduleName) %>"
   },
+  "scripts": {
+    "test": "grunt"
+  },
   "description": "An isomorphic javascript module.",
   "homepage": "https://github.com/<%= githubUser %>/<%= _.slugify(moduleName) %>",
   "bugs": "https://github.com/<%= githubUser %>/<%= _.slugify(moduleName) %>/issues",
@@ -26,6 +29,7 @@
     "autocmdr": "0.0.6"
   },
   "devDependencies": {
+    "grunt": "~0.4.2",
     "load-grunt-tasks": "~0.2.0",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-nodeunit": "~0.2.0",

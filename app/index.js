@@ -124,4 +124,5 @@ IsomodGenerator.prototype.app = function app() {
 IsomodGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
+  this.template('_travis.yml', '.travis.yml');
 };
