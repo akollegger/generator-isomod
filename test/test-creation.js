@@ -26,9 +26,21 @@ describe('isomod generator', function () {
             '.editorconfig'
         ];
 
+        // Patch the user info to not run into rate limits on travis
+        this.app.userInfo = function () {
+          this.realname = 'Tyrion Lannister';
+          this.email = 'imp@casterlyrock.com';
+          this.githubUrl = 'https://github.com/imp';
+        };
+
         helpers.mockPrompt(this.app, {
-            'someOption': true
+          'moduleName': 'temp',
+          'moduleVersion': '0.0.1',
+          'githubUser': 'imp',
+          'licenseType': 'unlicensed'
         });
+
+
         this.app.options['skip-install'] = true;
         this.app.run({}, function () {
             helpers.assertFiles(expected);
