@@ -44,6 +44,8 @@
     "coffee-script": "~1.6.3",
     "grunt-sync-pkg": "~0.1.2",
     "should": "~2.1.1",
-    "codo": "~2.0.3"
+    "codo": "~2.0.3",
+    "bower": "~1.2.8", 
+    "grunt-bower-requirejs": "~0.8.4"
   }
 }
