@@ -116,7 +116,7 @@ IsomodGenerator.prototype.app = function app() {
   this.directory('demo', 'demo');
   this.template('_iso-module.coffee', path.join('src', _s.slugify(this.moduleName) + "-module.coffee") );
 
-  this.template('bin/_isobin', path.join('bin', _s.camelize(this.moduleName)) );
+  this.template('bin/_isobin', path.join('bin', _s.slugify(this.moduleName)) );
 
   this.template('cmds/_shell.js', path.join('cmds', 'shell.js') );
 };

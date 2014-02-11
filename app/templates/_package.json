@@ -3,7 +3,7 @@
   "version": "<%= moduleVersion %>",
   "main": "dist/<%= _.slugify(moduleName) %>.js",
   "bin": {
-    "packageName": "./bin/<%= _.slugify(moduleName) %>"
+    "<%= _.slugify(moduleName) %>": "./bin/<%= _.slugify(moduleName) %>"
   },
   "scripts": {
     "test": "grunt"
